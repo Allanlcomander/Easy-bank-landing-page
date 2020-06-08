@@ -7,15 +7,11 @@ body{
     margin: 0;
     font-size: 18px;
     font-family: 'Public Sans', sans-serif;
-    font-weight: 300,400;
-    /* overflow-x: hidden; */
-    
-    
-   
+    font-weight: 300,400; 
 }
 
 h1{
- font-size: 50px;
+ font-size: 45px;
 }
 
 
@@ -24,7 +20,7 @@ h1{
 [class*="col-"] {
     float: left;
     padding: 15px;
-    /* border: 1px solid black; */
+    border: 1px solid black; 
       
   }
   
@@ -78,9 +74,30 @@ header{
     padding: 0 20px;
     
 }
+.nav-links li a{
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+    font-weight: 600;
+}
+
+button{
+    cursor: pointer;
+    padding: 15px 40px;
+    border-radius: 22px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    background-image: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    color: hsl(0, 0%, 100%);
+}
 
 
-/* intro */
+
+
+
+
+
+/* introduction */
 
 .introduction{
     height: auto;
