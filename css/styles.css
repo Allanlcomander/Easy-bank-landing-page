@@ -15,7 +15,7 @@ body{
 [class*="col-"] {
     float: left;
     padding: 15px;
-    /* border: 1px solid black;  */
+    /* border: 1px solid black;   */
       
   }
   
@@ -58,7 +58,6 @@ body{
     position: absolute;
     top: 1.5rem;
     right: 2.8rem;
-
 }
 
 
@@ -125,7 +124,7 @@ body{
 }
 header{
     z-index: 11111;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(220, 16%, 96%);
     position: relative;
 }
 header::after{
@@ -153,11 +152,13 @@ button{
    
     header{
         z-index: 99999;
-        background-color: hsl(0, 0%, 98%);
-        position: relative;
+        background-color:hsl(220, 16%, 96%);
+        /* position: relative; */
     }
     .logo{
-        position: relative;
+
+        margin: 30px;
+        /* position: relative; */
         top: 2rem;
     }
 
@@ -182,12 +183,12 @@ button{
 
     .navbar-links ul{
         position: relative;
-        top: 60px;
+        top: 30px;
         width: 90%;
         margin: 0 auto;
         flex-direction: column;
         border: 1px solid hsl(0, 0%, 98%);
-        border-radius: 10px;
+        border-radius: 5px;
         margin-bottom: 80px;
         background-color: hsl(0, 0%, 98%);
         
@@ -213,6 +214,10 @@ button{
 
 h1{
     font-size: 45px;
+}
+
+.mobile{
+    display: none;
 }
 
 /* introduction */
@@ -278,7 +283,10 @@ h1{
     padding-bottom: 50px;
 }
 
-
+.cards{
+    position: relative;
+    top: -200px;
+}
 .currency{
     height: 168px;
 }
@@ -301,9 +309,56 @@ h1{
     
 }
 
+.bold:hover{
+    cursor: pointer;
+    color: hsl(192, 70%, 51%)
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+footer{
+    background-color: hsl(233, 26%, 24%);
+    height: auto;
+    color: hsl(0, 0%, 98%);
+    font-weight: 600;
+    padding: 50px 0 0 0;
+}
+
+footer li{
+    list-style: none;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+}
+
+footer li:hover{
+    cursor: pointer;
+    color: hsl(136, 65%, 51%)
+}
+
+footer ul{
+    padding: 0;
+}
+footer img{
+    background-color: hsl(0, 0%, 98%);
+    overflow: hidden;
+}
+    
+
+.footer-end{
+    text-align: right;
+    
+}
+
+.copyright{
+    color: hsl(233, 8%, 62%);
+    font-size: 14px;
+    padding: 20px 0 0 0;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    padding-bottom: 10px; 
+}
+.attribution a { color: hsl(136, 65%, 51%) }
 
 
 
