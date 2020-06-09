@@ -15,7 +15,7 @@ body{
 [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid black; 
+    /* border: 1px solid black;  */
       
   }
   
@@ -211,18 +211,20 @@ button{
 /* End of navigation responsiveness */
 
 
+h1{
+    font-size: 45px;
+}
 
 /* introduction */
 
 .introduction{
-    /* position: relative; */
+    /* position: relative;  */
     height: auto;
+   
 
 }
 
-.introduction h1{
-    font-size: 45px;
-}
+
 .introduction p{
     font-size: 23px;
 }
@@ -231,6 +233,8 @@ button{
     position: relative;
     top: 80px;
     right: -120px;
+    
+    
 
 }
 
@@ -243,7 +247,7 @@ button{
     top: -200px; right:0;
     overflow-y: hidden;
     height: 930px; 
-    z-index: -1111;
+    z-index: -11111;
     
     
 }
@@ -263,13 +267,40 @@ button{
 
 .services{
     position: relative;
-    top: -400px;
+    top: -300px;
     background-color: hsl(220, 16%, 96%);
-    height: 500px;
+    height:auto;
     z-index: -99999;
-    padding: 80px 0 0 0;
+    padding: 200px 0 0 0;
     
 }
+.services .row{
+    padding-bottom: 50px;
+}
+
+
+.currency{
+    height: 168px;
+}
+
+.cards img{
+    border-top-left-radius: 5px ;
+    border-top-right-radius: 5px;
+}
+.cards h4{
+    font-size:12px;
+    color: hsl(233, 8%, 62%); 
+}
+.cards{
+    padding: 15px;
+    font-size: 16px;
+}
+
+.cards .bold{
+    font-weight: 600;
+    
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
