@@ -10,11 +10,6 @@ body{
     font-weight: 300,400; 
 }
 
-h1{
- font-size: 45px;
-}
-
-
 
   /* grid layout */
 [class*="col-"] {
@@ -56,57 +51,187 @@ h1{
 
 /* navigation */
 
-header{
+  /*toggle button  */
+.toggle-btn{
+    display: none; 
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 2.8rem;
+
+}
+
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: hsl(233, 8%, 62%);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+/* fade out second bar */
+
+.change .bar2 {
+  opacity: 0;
+}
+
+/* rotate last bar */
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
+/* end of toggle button */
+
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
-    background-color:  hsl(0, 0%, 100%);
+    width: 90%;
+    margin: 0 auto;
+
 }
 
-.nav-links{
+.navbar-links ul{
+    margin: 2rem;
+    padding: 10px;
+    display: flex;
+}
+.navbar-links li {
     list-style: none;
 
 }
 
-.nav-links li {
-    display: inline-block;
-    padding: 0 20px;
-    
-}
-.nav-links li a{
+.navbar-links ul li a{
     text-decoration: none;
     color: hsl(233, 8%, 62%);
+    padding: 1rem;
+    display: block;
+    font-weight: 400;
+}
+
+.navbar-links ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: hsl(136, 65%, 51%);
     font-weight: 600;
+}
+header{
+    z-index: 11111;
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+}
+header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+button{
+    padding: 10px 25px;
+    font-weight: 400;
+    color: hsl(0, 0%, 98%);
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
 }
 
 button{
     cursor: pointer;
-    padding: 15px 40px;
-    border-radius: 22px;
-    border: none;
-    outline: none;
-    font-weight: 600;
-    background-image: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
-    color: hsl(0, 0%, 100%);
+
 }
 
+/* navigation responsiveness */
+@media(max-width:768px){
+   
+    header{
+        z-index: 99999;
+        background-color: hsl(0, 0%, 98%);
+        position: relative;
+    }
+    .logo{
+        position: relative;
+        top: 2rem;
+    }
 
+    .toggle-btn{
+        display: block;
+    }
 
+    .nav-cta{
+        display: none;
+    }
 
+    .navbar-links{
+        display: none; 
+        width: 100%;
+
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        position: relative;
+        top: 60px;
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        border: 1px solid hsl(0, 0%, 98%);
+        border-radius: 10px;
+        margin-bottom: 80px;
+        background-color: hsl(0, 0%, 98%);
+        
+    }
+
+    .navbar-links li{
+        text-align: center;
+        
+    }
+
+    .navbar-links ul li a{
+        color: hsl(233, 26%, 24%);
+        font-weight: 600;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+}
+
+/* End of navigation responsiveness */
 
 
 
 /* introduction */
 
 .introduction{
+    /* position: relative; */
     height: auto;
+
+}
+
+.introduction h1{
+    font-size: 45px;
+}
+.introduction p{
+    font-size: 23px;
 }
 
 .image-mockup{
     position: relative;
     top: 80px;
-    right: -120px;  
+    right: -120px;
+
 }
 
 .intro-mockup{
@@ -135,6 +260,16 @@ button{
     font-size: 1.5em;
 }
 
+
+.services{
+    position: relative;
+    top: -400px;
+    background-color: hsl(220, 16%, 96%);
+    height: 500px;
+    z-index: -99999;
+    padding: 80px 0 0 0;
+    
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
