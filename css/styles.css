@@ -142,8 +142,10 @@ button{
     background-image: linear-gradient(to right, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
 }
 
-button{
+button:hover{
     cursor: pointer;
+    fill-opacity: hsl(0, 0%, 98%);
+    opacity: 85%; 
 
 }
 
@@ -153,6 +155,7 @@ button{
     header{
         z-index: 99999;
         background-color:hsl(220, 16%, 96%);
+        
         /* position: relative; */
     }
     .logo{
@@ -173,17 +176,19 @@ button{
     .navbar-links{
         display: none; 
         width: 100%;
+        
 
     }
 
     .navbar{
         flex-direction: column;
         align-items: flex-start;
+    
     }
 
     .navbar-links ul{
-        position: relative;
-        top: 30px;
+        position: absolute;
+        top: 120px;
         width: 90%;
         margin: 0 auto;
         flex-direction: column;
@@ -192,10 +197,12 @@ button{
         margin-bottom: 80px;
         background-color: hsl(0, 0%, 98%);
         
+        
     }
 
     .navbar-links li{
         text-align: center;
+        
         
     }
 
@@ -340,8 +347,23 @@ footer ul{
 footer img{
     background-color: hsl(0, 0%, 98%);
     overflow: hidden;
+    padding: 10px;
+    margin-left: 8px;
 }
     
+.icons{
+    margin-top: 40px;
+    
+}
+.icons ion-icon{
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icons ion-icon:hover{
+    fill: hsl(136, 65%, 51%);
+}
 
 .footer-end{
     text-align: right;
@@ -361,4 +383,80 @@ footer img{
 .attribution a { color: hsl(136, 65%, 51%) }
 
 
+/* media  querries*/
+
+
+@media (min-width:375px)and (max-width:425px){
+    [class*="col-"] {
+        width: 100%;
+        padding: 15px;
+        /* border: 1px solid black;   */
+          
+      }
+
+      .row{
+          width: 100%;
+      }
+
+      body{
+          text-align: center;
+      }
+
+      .intro-mockup{
+          display: none;
+      }
+      .mobile{
+          display: block;
+          position: relative;
+          background-image: url("../images/bg-intro-mobile.svg");
+          background-repeat: no-repeat;
+          background-position: right;
+          background-size: cover;
+          opacity: 100%;
+          background-color: hsl(220, 16%, 96%);
+      }
+      .intro-mobile{
+        width: 100%;
+      }
+
+      .mobile img{
+          width: 100%;
+          position: relative;
+          top: -120px;
+      }
+
+      .introduction{
+          height: 100%;
+      }
+      .intro-content{
+          position: relative;
+          top: -150px;
+      }
+      .services{
+        position: static;
+        padding: 80px 0 0 0;
+      }
+      .cards{
+          position: static;
+          padding: 80px 0 0 0;
+          
+      }
+      .currency{
+          height: 100%;
+      }
+
+      footer ul li,.footer-end{
+          text-align: center;
+      }
+
+     
+}
+
+@media(width:768px){
+
+}
+
+@media(width:1024px){
+    
+}
 
